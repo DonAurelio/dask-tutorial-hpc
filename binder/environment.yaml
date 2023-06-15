@@ -1,0 +1,15 @@
+name: dask-tutorial
+channels:
+  - conda-forge
+dependencies:
+  - python==3.10
+  - dask
+  - distributed
+  - coiled
+  - numpy
+  - ipykernel
+  - dask-labextension
+  - jupyterlab==3.5.0
+  - python-graphviz 
+  - dask-jobqueue
+  - memory_profiler
