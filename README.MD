@@ -13,26 +13,59 @@ Dask is an open-source Python library for parallel/distributed computing.
 * It exemplifies how these two concepts can be achieved using Dask. 
 * It exemplifies how Dask enable parallel computing/distributed, out-of-core computations and scalability (from a local machine to cloud computing systems)
 
-# Run this tutorial using Vagrant
+Start at [0.Introduction](0.Introduction.ipynb).
 
-```sh
-sudo apt update
-sudo apt install virtualbox
-sudo apt install vagrant
-vagrant --version
-``` 
-
-# Run this tutorial using your own machine
+__Run this tutorial using your own machine__
 
 * Create a virtual enviroment using `conda` or `pip`.
 * Install the `requirements.txt`
 * Run the jupyterlab enviroment.
 
-# This tutorial was presented in
+__Run this tutorial using Vagrant__
+
+[Vagrant](https://developer.hashicorp.com/vagrant/tutorials/getting-started) automates the deployment of virtual machines. The `Vagrantfile` defines a ready to use jupyterlab virtual machine for this tutorial. Use the following command to deploy the machine.
+
+Install vagrant
+
+```sh
+sudo apt update
+sudo apt install virtualbox
+sudo apt install vagrant
+``` 
+
+Provision the virtual machine
+
+```sh
+vagrant up
+```
+
+Get into the virtual machine
+
+```sh
+vagrant ssh
+```
+
+Stop the virtual machine
+
+```sh
+vagrant ssh
+```
+
+Destroy the virtual machine
+
+```sh
+vagrant ssh
+```
+
+Use the following url to access the jupyterlab enviroment.
+
+http://192.168.33.10:8000
+
+__This tutorial was presented in__
 
 1. [HPCSS2023: Colombian HPC Summer School 2023, June 20 - 22, 2023](https://cybercolombia.org/summer_school_6/).
 
-# Acknowledgements
+## Acknowledgements
 
 * This project is partially supported by CyberColombia
 * We thank [Chameleon Cloud](https://www.chameleoncloud.org/) for its support in compute time.
