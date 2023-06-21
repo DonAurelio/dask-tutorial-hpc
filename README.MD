@@ -9,11 +9,11 @@
 
 Dask is an open-source Python library for parallel/distributed computing. 
 
-* This tutorial explains fundamental problem paralleization concepts such as domain decomposition and functional decomposition. 
+* This tutorial explains two fundamental problem paralleization concepts: **domain decomposition** and **functional decomposition**. 
 * It exemplifies how these two concepts can be achieved using Dask. 
 * It exemplifies how Dask enable parallel computing/distributed, out-of-core computations and scalability (from a local machine to cloud computing systems)
 
-Start at [0.Introduction](0.Introduction.ipynb).
+__This tutorial start at__ [0.Introduction](0.Introduction.ipynb).
 
 __Run this tutorial using your own machine__
 
@@ -23,7 +23,7 @@ __Run this tutorial using your own machine__
 
 __Run this tutorial using Vagrant__
 
-[Vagrant](https://developer.hashicorp.com/vagrant/tutorials/getting-started) automates the deployment of virtual machines. The `Vagrantfile` defines a ready to use jupyterlab virtual machine for this tutorial. Use the following command to deploy the machine.
+[Vagrant](https://developer.hashicorp.com/vagrant/tutorials/getting-started) automates the deployment of virtual machines. The `Vagrantfile` defines a ready to use jupyterlab virtual machine for this tutorial. Use the following commands to deploy the machine.
 
 Install vagrant
 
@@ -69,5 +69,5 @@ __This tutorial was presented in__
 
 * This project is partially supported by CyberColombia
 * We thank [Chameleon Cloud](https://www.chameleoncloud.org/) for its support in compute time.
-* We thank [Coiled](https://www.coiled.io/) for its support in compute time on in their ready-to-use Dask Cloud Computing Platform.
+* We thank [Coiled](https://www.coiled.io/) for their technical support and compute time provided on their ready-to-use Dask Cloud Computing Platform.
 * We thank [Naty Clementi](https://github.com/ncclementi) from Coiled for her support and suggestions to improve this tutorial.
