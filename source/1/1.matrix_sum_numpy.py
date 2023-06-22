@@ -6,7 +6,7 @@ import numpy as np
 import sys
 
 # Size of the array
-shape = (10,10)
+shape = (10000,10000)
 
 # __2. Create arrays__
 x = np.ones(shape=shape)
