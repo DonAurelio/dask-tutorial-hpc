@@ -5,7 +5,7 @@
 import dask.array as da
 import sys
 
-shape = (10000,10000)
+shape = (1000,1000)
 chunks = (100,100)
 
 # __2. Create the arrays using `Dask Array` and perform domain decomposition. The `chucks` param tell Dask the size of the chuck that will be considered for the decomposition__ 

@@ -10,7 +10,7 @@ import numpy as np
 import sys
 
 # Size of the array
-shape = (10000,10000)
+shape = (1000,1000)
 
 # __2. Create arrays using Numpy__
 
