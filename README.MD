@@ -64,6 +64,7 @@ http://192.168.33.10:8000
 __This tutorial was presented in__
 
 1. [HPCSS2023: Colombian HPC Summer School 2023, June 20 - 22, 2023](https://cybercolombia.org/summer_school_6/).
+2. [CARLA2023: Latin American High Performance Computing Conference, September 18 - 22](https://www.carla2023.org/en/schedule/tutorial/232)
 
 ## Acknowledgements
 
