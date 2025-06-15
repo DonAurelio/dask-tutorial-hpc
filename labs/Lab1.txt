@@ -1,0 +1,7 @@
+Dask Tutorial: Lab 1 - Parallel Programming
+Team:
+Univerity: 
+
+1. Based on your experience, which decomposition strategy (domain or functional) proved to be the most natural for parallelizing the equation? Please explain your reasoning.
+
+2. Considering the implemented algorithms, which approach (automatic parallelization, domain decomposition, or functional decomposition) offers the most effective strategy for parallelizing this problem? Justify your answer.

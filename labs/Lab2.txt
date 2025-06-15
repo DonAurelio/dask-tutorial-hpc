@@ -1,0 +1,7 @@
+Dask Tutorial: Lab 2 - Scalability
+Team:
+Univerity: 
+
+1. Which approach, between domain and functional decomposition, demonstrates superior scalability? Please explain your reasoning.
+
+2. What combination of problem size and chunk size yielded the optimal execution time? Please explain your reasoning.
