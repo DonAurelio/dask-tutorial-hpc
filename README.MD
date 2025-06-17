@@ -72,3 +72,4 @@ __This tutorial was presented in__
 * We thank [Chameleon Cloud](https://www.chameleoncloud.org/) for its support in compute time.
 * We thank [Coiled](https://www.coiled.io/) for their technical support and compute time provided on their ready-to-use Dask Cloud Computing Platform.
 * We thank [Naty Clementi](https://github.com/ncclementi) from Coiled for her support and suggestions to improve this tutorial.
+* We thank [Alfonso Ladino](https://github.com/aladinor) for extending this tutorial with an example demonstrating the processing of Zaar analysis-ready radar data in the cloud, using streaming techniques within an HPC environment.
