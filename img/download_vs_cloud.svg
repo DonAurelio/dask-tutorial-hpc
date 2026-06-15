@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" width="100%" font-family="sans-serif" font-size="13">
+  <!-- ===================== Panel A: download-based ===================== -->
+  <rect x="10" y="10" width="440" height="360" rx="10" fill="#fdf3f2" stroke="#d73027" stroke-width="1.5"/>
+  <text x="230" y="34" text-anchor="middle" font-weight="bold" fill="#a50026">A. Download-based (NFS)</text>
+
+  <rect x="120" y="48" width="220" height="40" rx="6" fill="#ffffff" stroke="#999"/>
+  <text x="230" y="66" text-anchor="middle">Data provider / object store</text>
+  <text x="230" y="81" text-anchor="middle" fill="#666">full SAFE scene, .jp2 bands</text>
+
+  <line x1="230" y1="88" x2="230" y2="120" stroke="#d73027" stroke-width="2" marker-end="url(#arrowR)"/>
+  <text x="244" y="108" fill="#a50026">1. bulk download (whole scene)</text>
+
+  <rect x="120" y="120" width="220" height="48" rx="6" fill="#fde0dd" stroke="#d73027"/>
+  <text x="230" y="140" text-anchor="middle" font-weight="bold">ss-00 — NFS server</text>
+  <text x="230" y="156" text-anchor="middle">/home/data/raw</text>
+
+  <!-- fan out to nodes -->
+  <line x1="170" y1="168" x2="90"  y2="250" stroke="#d73027" stroke-width="1.5" marker-end="url(#arrowR)"/>
+  <line x1="230" y1="168" x2="230" y2="250" stroke="#d73027" stroke-width="1.5" marker-end="url(#arrowR)"/>
+  <line x1="290" y1="168" x2="370" y2="250" stroke="#d73027" stroke-width="1.5" marker-end="url(#arrowR)"/>
+  <text x="230" y="205" text-anchor="middle" fill="#a50026">2. every read crosses NFS</text>
+
+  <rect x="40"  y="250" width="100" height="40" rx="6" fill="#ffffff" stroke="#999"/>
+  <text x="90"  y="274" text-anchor="middle">ss-01</text>
+  <rect x="180" y="250" width="100" height="40" rx="6" fill="#ffffff" stroke="#999"/>
+  <text x="230" y="274" text-anchor="middle">ss-…</text>
+  <rect x="320" y="250" width="100" height="40" rx="6" fill="#ffffff" stroke="#999"/>
+  <text x="370" y="274" text-anchor="middle">ss-13</text>
+  <text x="230" y="312" text-anchor="middle" fill="#666">13 compute nodes / Dask workers</text>
+
+  <text x="230" y="346" text-anchor="middle" font-weight="bold" fill="#a50026">NFS server = single shared bottleneck</text>
+
+  <!-- ===================== Panel B: cloud-native ===================== -->
+  <rect x="470" y="10" width="440" height="360" rx="10" fill="#f2faf4" stroke="#1a9850" stroke-width="1.5"/>
+  <text x="690" y="34" text-anchor="middle" font-weight="bold" fill="#006837">B. Cloud-native (ARCO / Zarr)</text>
+
+  <rect x="580" y="48" width="220" height="48" rx="6" fill="#ffffff" stroke="#999"/>
+  <text x="690" y="68" text-anchor="middle" font-weight="bold">Object store (S3/OSN)</text>
+  <text x="690" y="84" text-anchor="middle" fill="#666">Zarr: chunked + compressed</text>
+
+  <!-- direct parallel streams to each worker -->
+  <line x1="610" y1="96" x2="540" y2="250" stroke="#1a9850" stroke-width="1.5" marker-end="url(#arrowG)"/>
+  <line x1="690" y1="96" x2="690" y2="250" stroke="#1a9850" stroke-width="1.5" marker-end="url(#arrowG)"/>
+  <line x1="770" y1="96" x2="840" y2="250" stroke="#1a9850" stroke-width="1.5" marker-end="url(#arrowG)"/>
+  <text x="690" y="170" text-anchor="middle" fill="#006837">stream only the needed chunks,</text>
+  <text x="690" y="187" text-anchor="middle" fill="#006837">in parallel (range reads)</text>
+
+  <rect x="490" y="250" width="100" height="40" rx="6" fill="#ffffff" stroke="#999"/>
+  <text x="540" y="274" text-anchor="middle">ss-01</text>
+  <rect x="630" y="250" width="100" height="40" rx="6" fill="#ffffff" stroke="#999"/>
+  <text x="690" y="274" text-anchor="middle">ss-…</text>
+  <rect x="770" y="250" width="100" height="40" rx="6" fill="#ffffff" stroke="#999"/>
+  <text x="820" y="274" text-anchor="middle">ss-13</text>
+  <text x="690" y="312" text-anchor="middle" fill="#666">workers read independently</text>
+
+  <text x="690" y="346" text-anchor="middle" font-weight="bold" fill="#006837">no central file server in the data path</text>
+
+  <defs>
+    <marker id="arrowR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#d73027"/>
+    </marker>
+    <marker id="arrowG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#1a9850"/>
+    </marker>
+  </defs>
+</svg>
